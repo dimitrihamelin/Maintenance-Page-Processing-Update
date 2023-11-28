@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website/title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #000; /* Fond noir */
+            color: #fff;
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative; /* Ajout pour positionnement relatif */
+        }
+
+        #loading-screen {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.8);
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            right: 0; /* Ajustement pour positionnement en bas à droite */
+            z-index: 2;
+        }
+
+        .maintenance-container {
+            position: relative;
+            z-index: 3;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        #countdown {
+            font-size: 24px;
+            color: #fff;
+            margin-top: 10px;
+        }
+
+        button {
+            font-size: 16px;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="maintenance-container">
+      <h1>Site Under Maintenance</h1>
+      <p>We are currently undergoing maintenance work.<br>Please come back later.<br><br>Contact: Your Email</p>
+        <div id="loading-screen">
+            <div class="loading-spinner"></div>
+            <div id="countdown"></div>
+        </div>
+    </div>
+
+</body>
+</html>
